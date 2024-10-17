@@ -57,3 +57,7 @@ add_test_executable_ex(NAME pinloki_passwords SOURCE pinloki_passwords.cc
 # Test pinloki with galera
 add_test_executable_ex(NAME pinloki_galera SOURCE pinloki_galera.cc
   CONFIG pinloki_galera.cnf VMS repl_backend galera_backend LABELS pinloki)
+
+# Test pinloki crash recovery
+add_test_executable_ex(NAME pinloki_recovery SOURCE pinloki_recovery.cc
+  CONFIG pinloki_recovery.cnf VMS repl_backend LABELS pinloki)
