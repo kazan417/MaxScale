@@ -106,6 +106,7 @@ CrashTest::CrashTest(InventoryWriter* pInv)
         else if (!key_values.empty())
         {
             const auto& kv = *key_values.begin();
+            MXB_SNOTICE(kv.first << " = " << kv.second);
             if (kv.first == "DBG_PINLOKI_FAIL_MID_TRX")
             {
                 m_fail_mid_trx = std::stoi(kv.second);

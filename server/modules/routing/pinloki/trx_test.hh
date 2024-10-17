@@ -47,7 +47,7 @@ CrashTest& crash_test();
     if (crash_test().test_case()) \
     {   \
         MXB_SERROR("recovery test exit on test case " << #test_case); \
-        exit(101); \
+        _Exit(101); \
     }
 
 #else
